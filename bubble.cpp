@@ -1,0 +1,1 @@
+#include <stdio.h>#include <iostream>using namespace std;int main(){	int x=0,n;	int a[100];	cin >> n;	for (int j=0; j<n; j++)		cin >> a[j];	for (int l=0; l<n; l++){		for (int k=l-1; k>=0; k--){			if ( a[k+1]<a[k] ){				x=a[k+1];				a[k+1]=a[k];				a[k]=x;			}		}	}for (int j=0; j<n; j++){cout << a[j] << " " ;}}
